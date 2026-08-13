@@ -1,0 +1,75 @@
+openapi: 3.0.3
+info:
+  title: My Novel Platform API
+  version: 0.1.0
+  description: API scaffold for the novel posting platform.
+servers:
+  - url: http://localhost:8080/api/v1
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: getHealth
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  /auth/register:
+    post:
+      summary: Register a user
+      operationId: registerUser
+      responses:
+        '501':
+          description: Not implemented
+  /auth/login:
+    post:
+      summary: Log in a user
+      operationId: loginUser
+      responses:
+        '501':
+          description: Not implemented
+  /works:
+    get:
+      summary: List public works
+      operationId: listWorks
+      responses:
+        '501':
+          description: Not implemented
+    post:
+      summary: Create a work
+      operationId: createWork
+      responses:
+        '501':
+          description: Not implemented
+  /works/{workId}:
+    get:
+      summary: Get work detail
+      operationId: getWork
+      parameters:
+        - name: workId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '501':
+          description: Not implemented
+    patch:
+      summary: Update a work
+      operationId: updateWork
+      parameters:
+        - name: workId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '501':
+          description: Not implemented
